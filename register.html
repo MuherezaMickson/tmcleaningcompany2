@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        function loginValidate(){
+            var fname=document.signup.fname.value;
+            var lname=document.signup.lname.value;
+            var pass =document.signup.password.value;
+            var pass2 =document.signup.cpassword.value;
+            if(fname.length<3 || fname.length>20){
+          document.getElementById('f_name_call_back').innerHTML ="First name MUST be between 3-20 Characters!";
+          document.signup.fname.focus();
+          return false;
+         }
+           if(lname.length<3 || lname.length>20){
+          document.getElementById('l_name_call_back').innerHTML ="Last name Must be between 3-20 characters!";
+          document.signup.lname.focus();
+          return false;
+         }
+            var emailID = document.signup.email.value;
+              atposition = emailID.indexOf("@");
+              dotposition = emailID.lastIndexOf(".");
+           if (atposition < 1 || ( dotposition - atposition < 2 )) {
+           document.getElementById('email_call_back').innerHTML= "Please enter correct email ID!";
+               document.signup.email.focus() ;
+              return false;
+           }
+           if(pass.length<5){
+           document.getElementById('pwd_call_back').innerHTML ="Password must be more than 5 characters!";
+          document.signup.password.focus();
+          return false;
+         }
+         if(pass2.length<5){
+           document.getElementById('pwd2_call_back').innerHTML ="Password must be more than 5 characters!";
+          document.signup.cpassword.focus();
+          return false;
+         }
+         return( true );
+        }
+    </script>
+
+    <head>
+        <title>register with T&M cleaning company</title>
+    </head>
+    <body>
+        <center>
+            <header>
+            <img class="logo" src="images (1).jpeg" alt="logo">
+                <h1>T&M CLEANING COMPANY</h1>
+            </header>
+        </center>
+              <h3>Why choose T&M cleaning company</h3>
+              <p>
+                T&M cleaning company has developed a reputation for high quality cleaning, reliable staff 
+                <br>and a service that goes above and beyond.<br>
+                
+                We have been established for over 10 years and we invest in our staff and they repay that<br>
+                 with loyalty and a strong work ethic. We invest in training and equipment and that elevates <br>
+                 us above much of the competition.<br>
+                
+                Such investment attracts the best cleaners around, which is why our services are so sought-after.<br>
+                
+                We are also flexible. While we do work under contract, those contracts include the flexibility to add<br>
+                 or change services as required. We appreciate that business changes all the time and you need contractors willing to change with you. That’s what we offer.
+              </p><h5>
+                We also offer:
+            </h5>
+                
+               <li>Contracts that can include most types of commercial cleaning</li> 
+               <li>Flexible working hours to suit your schedule</li> 
+               <li> Fully trained and insured staff</li> 
+               <li>Competitive prices with an emphasis on quality</li> 
+               <li>Scheduled office cleaning in Mbarara and surrounding areas</li> 
+                <p>
+                If you’re looking for efficient, reliable office cleaning in Western uganda, contact T&M cleaning company for a free quotation!</p>
+        
+        <center>
+        <form>
+        
+            <fieldset class="signupf" style =" height:700px; width: 1000px; left: 30%;top :10%;">
+               <p style= "font-size: 40px;">T&M CLEANING COMPANY</p>
+               <fieldset>
+                   <legend style="text-align: center;">SignUp</legend><br>
+                   <label for="fname_id"> First Name </label><br>
+                   <input type="text" name="fname" id="fname_id" placeholder="Enter you first name"><span id="f_name_call_back" style="color: red;"></span><br><br>
+                   <label for="lname_id"> Last Name </label><br>
+                   <input type="text" name="lname" id="lname_id"placeholder="Enter you last name"><span id="l_name_call_back" style="color: red;"></span><br><br>
+                   <label for="email_id"> User Email </label><br>
+                   <input type="email" name="email" id="email_id"placeholder="Enter you user email"><span id="email_call_back" style="color: red;"></span><br><br>
+                   <label for="pass_id"> Password </label><br>
+                   <input type="password" name="password" id="pass_id"placeholder="Enter your password"><span id="pwd_call_back" style="color: red;"></span><br><br>
+                   <label for="com_pass_id"> Confirm Password </label><br>
+                   <input type="password" name="cpassword" id="com_pass_id"placeholder="confirm your password"><span id="pwd2_call_back" style="color: red;"></span><br><br>
+               </fieldset><br>
+               <button class="login">
+               <a  href="services.html">LOGIN
+               </a>
+            </button><br>
+               <a href="Login.html">Already have an account? Login here </a>
+              
+            </fieldset>
+           </form>
+        </center>
+        <footer>
+            <h3>Privacy and protection</h3>
+            <p>Please see the “Privacy Policy" hypertext link located at the bottom of the home page in this website regarding the collection and use of your personal information. Additionally, by using this website, you acknowledge and agree that Internet transmissions are never completely private or secure. You understand that any message or information you send to this website may be read or intercepted by others, even if there is a special notice that a particular transmission (for example, credit card information) is encrypted. </p>
+        </footer>
+        
+    </body>
+    <style>
+     body{
+            font-size: larger;
+        }
+        .signupf{
+            background-color: rgb(0, 252, 84);
+            border-radius: 12px;
+        }
+   .logo{
+    margin-top: 5px;
+       background-color: white;
+       width: 200px;
+   } 
+   header{
+       background-color: rgb(80, 209, 248);
+   }
+    
+    footer{
+        background-color: greenyellow;
+    }
+    .login{
+        background-color: hotpink;
+        height: 50px;
+        width: 100px;
+        font-size: large;
+        color: white;
+        border: none;
+        border-radius:25px;
+    }
+    </style>
+</html>
+
+ 
+
